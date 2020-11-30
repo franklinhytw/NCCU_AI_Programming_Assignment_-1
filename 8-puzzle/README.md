@@ -1,9 +1,4 @@
-# N-Puzzle-solver-with-Search-Algorithms
-
-N-puzzle solver with Search Algorithms including: BFS, DFS (with limited depth), Greedy and A*
-
-
-There are 2 heuristics for Greedy and A* algorithms. The first one evaluates states with manhattan distance and the second one evaluates states with number of misplaced tiles. 
+# N-Puzzle-solver-program-assignment
 
 ## Input
 
@@ -15,7 +10,7 @@ First n should be entered and then the initial state of puzzle would be a list o
  
  Note that if you want to work with n > 3, goal should be changed in State class.
  
- ## Output
+## Output
  
  Output of each search algorithm will be the puzzle solution, number of explored nodes and spent time for search.
  
@@ -24,3 +19,10 @@ BFS Solution is  ['Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Right',
 Number of explored nodes is  224
 BFS Time: 0.005887031555175781
 ```
+
+## Requirement
+* (a) Iterative-Deepening Search (IDS)
+* (b) Uniform-Cost Search
+* (c) Greedy Best-First Search
+* (d) A* search
+* (e) Recursive Best-First Search (RBFS)

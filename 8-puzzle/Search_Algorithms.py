@@ -49,8 +49,34 @@ def DFS(given_state , n):
                     return child.solution(), len(explored)
                 frontier.put(child)
     return (("Couldn't find solution in the limited depth."), len(explored))
-        
-    
+
+def depthLimited(given_state, depth):
+    leaves = LifoQueue()
+    leaves.put(given_state)
+    while True:
+        if leaves.empty():
+            return None
+        actual = leaves.get()
+        if actual.goalState():
+            return actual
+        elif actual.depth is not depth:
+            succ = actual.succ()
+            while not succ.empty():
+                leaves.put(succ.get())
+
+def IDS(given_state , n):
+    depth = 0
+    result = None
+    while result == None:
+        result = depthLimited(given_state, depth)
+        depth += 1
+    return result
+
+def RBFS(given_state , n):
+    return []
+
+def UniformCostSearch(given_state , n):
+    return []
     
 def Greedy(given_state , n):
     frontier = PriorityQueue()
