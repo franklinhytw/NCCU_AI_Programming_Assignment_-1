@@ -1,4 +1,4 @@
-# N-Puzzle-solver-program-assignment
+# 8-Puzzle-solver-program-assignment
 
 ## Input
 
@@ -26,3 +26,7 @@ BFS Time: 0.005887031555175781
 * (c) Greedy Best-First Search
 * (d) A* search
 * (e) Recursive Best-First Search (RBFS)
+
+## Reference
+https://tristanpenman.com/demos/n-puzzle
+https://github.com/aimacode/aima-pseudocode
