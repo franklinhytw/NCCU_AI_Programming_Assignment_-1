@@ -1,4 +1,4 @@
-# 8-Puzzle-solver-program-assignment
+# N-Puzzle-solver-program-assignment-1
 
 ## Input
 
