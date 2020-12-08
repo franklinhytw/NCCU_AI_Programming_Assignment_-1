@@ -33,7 +33,7 @@ def DLS(given_state, n, depth):
     return (False, len(explored))
     
 def IDS(given_state , n):
-    for depth in range(31): # 0 ~ 30
+    for depth in range(100): # 0 ~ 30
         (result,length) = DLS(given_state, n ,depth)
         if result != False:
             return result, length

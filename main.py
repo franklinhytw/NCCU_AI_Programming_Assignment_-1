@@ -1,6 +1,7 @@
 from searchAlgorithms import *
 from state import State
 from time import time
+from random import *
 
 #count the number of inversions       
 def inv_num(puzzle):
@@ -46,16 +47,24 @@ if __name__ == '__main__':
     #     root.append(p)
     
     n = 3
-    root = [0,2,3,1,4,5,8,7,6]
-    
+    root = [0,1,2,7,6,4,3,8,5]
     # n = 4
     # root = [1,2,3,4,13,14,5,6,12,11,15,0,10,9,8,7]
+    
+    # gen_goal = []
+    # while len(gen_goal) < 9:
+    #     rn = randint(0, 8)
+    #     if rn not in gen_goal:
+    #         gen_goal.append(rn)
+            
+    # print(gen_goal)
 
     print("Initial state is:")
     print_puzzle(root)
     print("Goal state is:")
     if n == 3:
         State.goal = [1, 2, 3, 8, 0, 4, 7, 6, 5]
+        # State.goal = gen_goal 
     elif n == 4:
         State.goal = [1, 2, 3, 4, 12, 13, 14, 5, 11, 0, 15, 6, 10, 9, 8, 7]
     
