@@ -34,5 +34,5 @@ IDS Spent Time: 0.005887031555175781
 #### Please explain the strategy you used in the search problem.
 
 ## Reference
-https://tristanpenman.com/demos/n-puzzle
-https://github.com/aimacode/aima-pseudocode
+* https://tristanpenman.com/demos/n-puzzle
+* https://github.com/aimacode/aima-pseudocode
