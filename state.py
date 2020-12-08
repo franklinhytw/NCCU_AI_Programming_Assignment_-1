@@ -1,9 +1,3 @@
-# 3x3
-# goal = [1, 2, 3, 8, 0, 4, 7, 6, 5]
-# 4x4
-# goal = []
-# goal = [1, 2, 3, 4, 12, 13, 14, 5, 11, 0, 15, 6, 10, 9, 8, 7]
-
 class State:
     greedy_evaluation = None
     AStar_evaluation = None
@@ -21,9 +15,7 @@ class State:
 
         else:
             self.cost = cost
-
-            
-            
+         
     def test(self): #check if the given state is goal
         if self.state == self.goal:
             return True
@@ -41,12 +33,12 @@ class State:
         self.greedy_evaluation = self.heuristic    
         self.AStar_evaluation = self.heuristic + self.cost
         
-        return( self.greedy_evaluation, self.AStar_evaluation)
+        return(self.greedy_evaluation, self.AStar_evaluation)
 
 
     #heuristic function based on number of misplaced tiles
     def Misplaced_Tiles(self,n): 
-        counter = 0;
+        counter = 0
         self.heuristic = 0
         for i in range(n*n):
             for j in range(n*n):

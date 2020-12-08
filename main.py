@@ -46,18 +46,27 @@ if __name__ == '__main__':
     #     p = int(input())
     #     root.append(p)
     
-    n = 3
-    root = [0,1,2,7,6,4,3,8,5]
-    # n = 4
-    # root = [1,2,3,4,13,14,5,6,12,11,15,0,10,9,8,7]
-    
-    # gen_goal = []
-    # while len(gen_goal) < 9:
-    #     rn = randint(0, 8)
-    #     if rn not in gen_goal:
-    #         gen_goal.append(rn)
+    # n = 3
+    # root = [0,1,2,7,6,4,3,8,5]
+
+    n = 4
+    # root = [2,6,7,13,5,4,11,12,1,3,8,10,14,15,9,0]
+
+    #easy version
+    root = [2, 3,4,5,
+            1,12,14,6,
+           11,13,15,7,
+           10, 9, 0,8]
+
+    # root = []
+
+    # random initial state generator
+    while len(root) < 16:
+        rn = randint(0, 15)
+        if rn not in root:
+            root.append(rn)
             
-    # print(gen_goal)
+    # print(gen_root)
 
     print("Initial state is:")
     print_puzzle(root)
@@ -109,5 +118,5 @@ if __name__ == '__main__':
     RBFS_time = time() - start_time
     print('RBFS is ', RBFS_solution[0])
     print('STEP:', len(RBFS_solution[0]))
-    print('Number of explored nodes is ', RBFS_solution[1])   
+    print('Number of successors is ', RBFS_solution[1])   
     print('RBFS Time:%.4fms' % (RBFS_time*1000), "\n")
