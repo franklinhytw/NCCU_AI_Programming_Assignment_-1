@@ -3,24 +3,6 @@ from state import State
 from time import time
 from random import *
 
-#count the number of inversions       
-def inv_num(puzzle):
-    inv = 0
-    for i in range(len(puzzle)-1):
-        for j in range(i+1 , len(puzzle)):
-            print("i:%d, j:%d, puzzle[%d]:%d, puzzle[%d]%d, inv:%d" % (i, j, i, puzzle[i], j, puzzle[j], inv))
-            if (( puzzle[i] > puzzle[j]) and puzzle[i] and puzzle[j]):
-
-                inv += 1
-    return inv
-
-def solvable(puzzle): #check if initial state puzzle is solvable: number of inversions should be even.
-    return True
-    # inv_counter = inv_num(puzzle)
-    # if (inv_counter %2 ==0):
-    #     return True
-    # return False
-
 def print_puzzle(puzzle):
     tmp_counter = 0
     for num in puzzle:
@@ -34,9 +16,7 @@ def print_puzzle(puzzle):
             print(num, end='  | ')
         tmp_counter = tmp_counter+1
     print()
-    
-#1,8,2,0,4,3,7,6,5 is solvable
-#2,1,3,4,5,6,7,8,0 is not solvable
+
 if __name__ == '__main__':
     # initial state
     # n = int(input("Enter n\n"))
@@ -87,14 +67,14 @@ if __name__ == '__main__':
     print('IDS Solution is ', IDS_solution[0])
     print('STEP:', len(IDS_solution[0]))
     print('Number of explored nodes is ', IDS_solution[1])
-    print('IDS Time:%.4fms' % (IDS_time*1000), "\n")  
-    
+    print('IDS Time:%.4fms' % (IDS_time*1000), "\n")
+
     start_time = time()
     UCS_solution = UniformCostSearch(root, n)
     UCS_time = time() - start_time
     print('UCS is ', UCS_solution[0])
     print('STEP:', len(UCS_solution[0]))
-    print('Number of explored nodes is ', UCS_solution[1])   
+    print('Number of explored nodes is ', UCS_solution[1])
     print('UCS Time:%.4fms' % (UCS_time*1000), "\n")
     
     start_time = time()
@@ -102,7 +82,7 @@ if __name__ == '__main__':
     Greedy_time = time() - start_time
     print('Greedy with Manhattan Distance Solution is ', Greedy_solution[0])
     print('STEP:', len(Greedy_solution[0]))
-    print('Number of explored nodes is ', Greedy_solution[1])   
+    print('Number of explored nodes is ', Greedy_solution[1])
     print('Greedy Time:%.4fms' % (Greedy_time*1000) , "\n")
     
     start_time = time()

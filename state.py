@@ -35,21 +35,6 @@ class State:
         
         return(self.greedy_evaluation, self.AStar_evaluation)
 
-
-    #heuristic function based on number of misplaced tiles
-    def Misplaced_Tiles(self,n): 
-        counter = 0
-        self.heuristic = 0
-        for i in range(n*n):
-            for j in range(n*n):
-                if (self.state[i] != self.goal[j]):
-                    counter += 1
-                self.heuristic = self.heuristic + counter
-
-        self.greedy_evaluation = self.heuristic    
-        self.AStar_evaluation = self.heuristic + self.cost
-
-        return( self.greedy_evaluation, self.AStar_evaluation)                
                     
     @staticmethod
     
@@ -88,7 +73,6 @@ class State:
             children.append(State(temp, self, direction, self.depth + 1, 1)) #depth should be changed as children are produced
         return children
 
-    
     #gets the given state and returns it's direction + it's parent's direction till there is no parent
     def solution(self):
         solution = []
