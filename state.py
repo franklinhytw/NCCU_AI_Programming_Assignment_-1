@@ -1,12 +1,15 @@
+# 3x3
+# goal = [1, 2, 3, 8, 0, 4, 7, 6, 5]
+# 4x4
+# goal = []
+# goal = [1, 2, 3, 4, 12, 13, 14, 5, 11, 0, 15, 6, 10, 9, 8, 7]
+
 class State:
-    # goal = [1, 2, 3, 8, 0, 4, 7, 6, 5]
-    #this should be changed manually based on n 
-    #e.g. it should be [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0] if n is 4.
-    goal = [1, 2, 3, 4, 12, 13, 14, 5, 11, 0, 15, 6, 10, 9, 8, 7]
-    
     greedy_evaluation = None
     AStar_evaluation = None
     heuristic = None
+    goal = []
+    
     def __init__(self, state, parent, direction, depth, cost):
         self.state = state
         self.parent = parent
@@ -56,8 +59,6 @@ class State:
 
         return( self.greedy_evaluation, self.AStar_evaluation)                
                     
-
-
     @staticmethod
     
     #this would remove illegal moves for a given state
@@ -107,4 +108,3 @@ class State:
         solution = solution[:-1]
         solution.reverse()
         return solution
-         
