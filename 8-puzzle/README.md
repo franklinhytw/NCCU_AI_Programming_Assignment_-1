@@ -3,7 +3,7 @@
 ## Input
 
 
-### Default
+#### Default
 ```
  initial_state = [0, 2, 3, 1, 4, 5, 8, 7, 6]
 ```
@@ -11,9 +11,9 @@
 ## Output
  
 ```
-BFS Solution is  ['Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Right', 'Down']
+IDS Solution is  ['Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Right', 'Down']
 Number of explored nodes is  224
-BFS Time: 0.005887031555175781
+IDS Spent Time: 0.005887031555175781
 ```
 
 ## Requirement
