@@ -35,7 +35,7 @@ def DLS(given_state, n, depth):
     return (False, len(explored))
     
 def IDS(given_state , n):
-    for depth in range(31):
+    for depth in range(31): # 0 ~ 30
         (result,length) = DLS(given_state, n ,depth)
         if result != False:
             return result, length
@@ -57,6 +57,7 @@ def UniformCostSearch(given_state , n):
         children = current_node.expand(n)
         for child in children:
             if child.state not in explored:
+                pass
         pass
 
 #Breadth-first Search
@@ -94,7 +95,7 @@ def DFS(given_state , n):
         max_depth = current_node.depth #current depth
         explored.append(current_node.state)
         
-        if max_depth == 40:
+        if max_depth == 20:
             continue #go to the next branch
 
         children = current_node.expand(n)

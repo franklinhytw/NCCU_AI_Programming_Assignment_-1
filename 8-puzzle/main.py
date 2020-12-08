@@ -30,30 +30,16 @@ if __name__ == '__main__':
     # for i in range(0,n*n):
     #     p = int(input())
     #     root.append(p)
-    n = 3
-    #root = [1, 2, 3, 0, 8, 4, 7, 6, 5]
-    root = [0,2,3,1,4,5,8,7,6]
+    # n = 3
+    # root = [0,2,3,1,4,5,8,7,6]
+    
+    n = 4
+    root = [1,2,3,4,13,14,5,6,12,11,15,0,10,9,8,7]
 
     print("The given state is:", root)
 
     print("Solvable, please wait. \n")
-    
-    time1 = time()
-    BFS_solution = BFS(root, n)
-    BFS_time = time() - time1
-    print('BFS Solution is ', BFS_solution[0])
-    print('STEP:', len(BFS_solution[0]))
-    print('Number of explored nodes is ', BFS_solution[1])    
-    print('BFS Time:', BFS_time , "\n")
-          
-    time2 = time()
-    DFS_solution = DFS(root, n)
-    DFS_time = time() - time2
-    print('DFS Solution is ', DFS_solution[0])
-    print('STEP:', len(DFS_solution[0]))
-    print('Number of explored nodes is ', DFS_solution[1])
-    print('DFS Time:', DFS_time, "\n")
-    
+                 
     time5 = time()
     IDS_solution = IDS(root, n)
     IDS_time = time() - time5
@@ -78,7 +64,7 @@ if __name__ == '__main__':
     print('Number of explored nodes is ', AStar_solution[1])   
     print('A* Time:', AStar_time)
     
-    UniformCostSearch(root, n)
+    # UniformCostSearch(root, n)
 
     # ids_solve = IDS(root, n)
     # print('A* Solution is ', ids_solve[0])
